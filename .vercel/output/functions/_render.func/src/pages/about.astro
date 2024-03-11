@@ -1,0 +1,215 @@
+---
+import Features2 from '~/components/widgets/Features2.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import Steps2 from '~/components/widgets/Steps2.astro';
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'About us',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline="About us"
+    image={{
+      src: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Caos Image',
+    }}
+  >
+    <Fragment slot="title">
+      Eleve su presencia en línea con nuestras <br />
+      <span class="text-accent dark:text-white highlight"> Hermosas plantillas de sitios web</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      "Conoce Nuestro Equipo y Valores"
+    </Fragment>
+  </Hero>
+
+  <!-- Stats Widget ****************** -->
+
+  <Stats
+    title="Estadísticas sobre nosotros"
+    stats={[
+      { title: 'Offices', amount: '4' },
+      { title: 'Employees', amount: '248' },
+      { title: 'Templates', amount: '12' },
+      { title: 'Awards', amount: '24' },
+    ]}
+  />
+
+  <!-- Features3 Widget ************** -->
+
+  <Features3
+    title="Nuestras plantillas"
+    subtitle="Diseños innovadores para tu web"
+    columns={3}
+    isBeforeContent={true}
+    items={[
+      {
+        title: 'Educativo',
+        description:
+          'Impulsa tu aprendizaje con nuestra plantilla "Educativo": diseñada para enriquecer la experiencia educativa en línea. Sumérgete en un entorno donde cada elemento, desde el diseño intuitivo hasta las interacciones dinámicas, está pensado para fomentar la curiosidad y el descubrimiento. Con "Educativo", la enseñanza y el aprendizaje se transforman en un viaje visualmente atractivo y altamente interactivo, perfecto para captar la atención y mejorar la retención del conocimiento. Sea para e-learning, cursos en línea o plataformas educativas, nuestra plantilla ofrece la base ideal para crear experiencias de aprendizaje memorables.',
+        icon: 'tabler:template',
+      },
+      {
+        title: 'Diseño de interiores',
+        description:
+          'Transforma cualquier espacio con nuestra plantilla "Diseño de Interiores": un lienzo perfecto para los creadores de ambientes. Esta plantilla, diseñada meticulosamente, fusiona funcionalidad y estética, invitándote a explorar un mundo donde cada detalle cuenta. Desde la elegancia sutil hasta las declaraciones audaces, "Diseño de Interiores" proporciona las herramientas necesarias para dar vida a tus visiones más innovadoras. Ideal para diseñadores, arquitectos y aficionados al hogar, esta plantilla es tu puerta de entrada a proyectos que no solo se ven espectaculares, sino que también se sienten como en casa. Deja que tu creatividad fluya y transforma lo ordinario en extraordinario.',
+        icon: 'tabler:template',
+      },
+      {
+        title: 'Fotografía',
+        description:
+          'Captura la esencia del momento con nuestra plantilla "Fotografía": una ventana al arte de contar historias visuales. Diseñada para fotógrafos apasionados y creativos, esta plantilla transforma tus galerías en exposiciones digitales que hablan. Con un enfoque en la simplicidad y la elegancia, cada elemento está meticulosamente calibrado para resaltar tus obras maestras, desde impresionantes paisajes hasta retratos conmovedores. "Fotografía" te ofrece las herramientas para crear un portafolio en línea atractivo y profesional, donde cada clic revela la profundidad y el alma detrás de cada imagen. Ideal para exhibir tu talento y capturar la atención de espectadores y clientes por igual',
+        icon: 'tabler:template',
+      },
+    ]}
+  />
+
+  <!-- Features3 Widget ************** -->
+
+  <Features3
+    columns={3}
+    isAfterContent={true}
+    items={[
+      {
+        title: 'E-commerce',
+        description:
+          'Transforma clics en clientes con nuestra plantilla de E-commerce, diseñada para cautivar y convertir. Un viaje de compra sin esfuerzo te espera.',
+        icon: 'tabler:template',
+      },
+      {
+        title: 'Blog',
+        description:
+          'Expresa tu voz con estilo. Nuestra plantilla de Blog es el lienzo perfecto para tus historias, ideas y pasiones. Inspira y conecta con tu audiencia.',
+        icon: 'tabler:template',
+      },
+      {
+        title: 'Business',
+        description:
+          'Eleva tu empresa al siguiente nivel. Nuestra plantilla Business combina profesionalismo y creatividad, impulsando tu presencia en el mercado.',
+        icon: 'tabler:template',
+      },
+      {
+        title: 'Branding',
+        description:
+          'Crea una marca inolvidable. Nuestra plantilla de Branding está diseñada para destacar tu identidad única y dejar una impresión duradera.',
+        icon: 'tabler:template',
+      },
+      {
+        title: 'Medical',
+        description:
+          'Conecta con tus pacientes. Nuestra plantilla Medical ofrece un diseño claro y accesible, ideal para profesionales de la salud que buscan impactar.',
+        icon: 'tabler:template',
+      },
+      {
+        title: 'Fashion Design',
+        description:
+          'Deja que tus diseños hablen. Nuestra plantilla de Fashion Design es el escaparate perfecto para la belleza y la innovación en el mundo de la moda.',
+        icon: 'tabler:template',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
+      alt: 'Colorful Image',
+    }}
+  />
+
+  <!-- Steps2 Widget ****************** -->
+
+  <Steps2
+    title="Nuestros valores"
+    subtitle="Impulsando la excelencia a través de la integridad y la innovación."
+    items={[
+      {
+        title: 'Enfoque Centrado en el Cliente',
+        description:
+          'Priorizamos las necesidades y expectativas de nuestros clientes, adaptándonos y evolucionando constantemente para superar sus desafíos con soluciones creativas y efectivas.',
+      },
+      {
+        title: 'Mejora Continua',
+        description:
+          'Nos dedicamos a la evolución constante, buscando siempre nuevas maneras de optimizar nuestros procesos y servicios para entregar valor y excelencia sin precedentes.',
+      },
+      {
+        title: 'Prácticas Éticas',
+        description:
+          'Nuestro norte es la integridad. Adoptamos prácticas éticas en todas nuestras operaciones, comprometiéndonos con la responsabilidad social y la sostenibilidad, para hacer una diferencia significativa en el mundo.',
+      },
+    ]}
+  />
+
+  <!-- Steps2 Widget ****************** -->
+
+  <Steps2
+    title="Logros"
+    subtitle="Nuestros Éxitos Destacados"
+    isReversed={true}
+    callToAction={{
+      text: 'ver más',
+      href: '/',
+    }}
+    items={[
+      {
+        title: 'Alcance Global',
+        description: 'Nuestra presencia se expande más allá de las fronteras, conectando culturas y mercados con soluciones innovadoras. Nuestro enfoque global garantiza que tu proyecto tenga el impacto deseado, en cualquier parte del mundo.',
+        icon: 'tabler:globe',
+      },
+      {
+        title: 'Feedback Positivo de Clientes',
+        description:
+          'La satisfacción de nuestros clientes es nuestra carta de presentación. Nos enorgullece recibir comentarios que reflejan nuestro compromiso con la excelencia y el servicio de calidad superior.',
+        icon: 'tabler:message-star',
+      },
+      {
+        title: 'Premios y Reconocimientos',
+        description:
+          'Nuestra expertise en la industria nos ha hecho merecedores de múltiples premios y reconocimientos. Somos un equipo galardonado, comprometido con la innovación y la excelencia en todo lo que hacemos.',
+        icon: 'tabler:award',
+      },
+    ]}
+  />
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="Nuestra ubicacion"
+    tagline="Encuéntranos"
+    columns={1}
+    items={[
+      {
+        title: 'Argentina',
+        description: 'Provincia La Pampa , 6380 ,Eduardo Castex',
+      },
+      
+    ]}
+  />
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="Apoyo técnico"
+    tagline="Contacta con nosotros"
+    columns={2}
+    items={[
+      {
+        title: 'habla con nosotros',
+        description:
+          'Estamos aquí para escucharte. Nuestro equipo está listo para atender todas tus consultas y guiarte en cada paso. Comunícate con nosotros y experimenta un servicio al cliente sin precedentes.',
+        icon: 'tabler:messages',
+      },
+      {
+        title: 'Llámanos',
+        description:
+          '¿Prefieres una conversación directa? Nuestro equipo de expertos está a una llamada de distancia, listo para ofrecerte soluciones personalizadas y responder a tus preguntas al instante.',
+        icon: 'tabler:headset',
+      },
+    ]}
+  />
+</Layout>

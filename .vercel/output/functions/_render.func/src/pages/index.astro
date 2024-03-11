@@ -1,0 +1,387 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+import Note from '~/components/widgets/Note.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import Content from '~/components/widgets/Content.astro';
+import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Tecnodespegue',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    image={{ src: '~/assets/images/hero.png', alt: 'AstroWind Hero Image' }}
+  >
+    <Fragment slot="title">
+      "Trasformando ideas <span class="hidden xl:inline">en realidad digital,</span>
+      <span class="text-accent dark:text-white highlight">un pixel a la vez."</span> 
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      <span class="hidden sm:inline">
+        <span class="font-semibold">El desarrollo web es el arte de crear experiencias digitales</span> que conectan e impactan. Mediante el uso de tecnologías avanzadas, construimos sitios web dinámicos, responsivos y a medida, 
+        </span
+      >
+      <span class="block mb-1 sm:hidden font-bold text-blue-600"></span>
+      asegurando que cada pixel cumpla su propósito. Nos enfocamos en la usabilidad, la estética y la funcionalidad, para transformar tu visión en una plataforma poderosa y accesible para todos.
+    </Fragment>
+  </Hero>
+
+  <!-- Note Widget ******************* -->
+
+  <Note />
+
+  <!-- Features Widget *************** -->
+
+  <Features
+    id="features"
+    tagline="Features"
+    title="Lo que obtienes con Tecnodespegue"
+    subtitle="Compra nuestras plantillas y obtén un sitio web profesional en minutos."
+    items={[
+      {
+        title: 'Astro + Tailwind CSS Integration',
+        description:
+          'Una integración perfecta entre dos grandes frameworks que ofrecen alta productividad, rendimiento y versatilidad.',
+        icon: 'tabler:brand-tailwind',
+      },
+      {
+        title: 'Ready-to-use Components',
+        description:
+          'Widgets creados con Tailwind CSS listos para ser utilizados en sitios web de marketing, SaaS, blogs, perfiles personales, pequeñas empresas...',
+        icon: 'tabler:components',
+      },
+      {
+        title: 'Best Practices',
+        description:
+          'Crear sitios web seguros, eficientes y fáciles de usar que brinden experiencias excepcionales y valor duradero.',
+        icon: 'tabler:list-check',
+      },
+      {
+        title: 'Excellent Page Speed',
+        description:
+          'Tener una buena velocidad de página afecta la clasificación de búsqueda orgánica, mejora la experiencia del usuario (UI/UX) y aumenta las tasas de conversión.',
+        icon: 'tabler:rocket',
+      },
+      {
+        title: 'Search Engine Optimization (SEO)',
+        description:
+          "El SEO radica en su capacidad para mejorar la visibilidad de un sitio web, generando tráfico orgánico y permitiéndole llegar a una audiencia más amplia.",
+        icon: 'tabler:arrows-right-left',
+      },
+      {
+        title: 'Open to new ideas and contributions',
+        description:
+          'Adoptar una cultura abierta a nuevas ideas y contribuciones es fundamental para fomentar la innovación, la colaboración y una experiencia de usuario dinámica.',
+        icon: 'tabler:bulb',
+      },
+    ]}
+  />
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    tagline="Tecnodespegue"
+    title="¡la diversión se une a la funcionalidad!"
+    items={[
+      {
+        title: 'Construido sobre Astro 4.0',
+        description:
+          'Benefíciese del rendimiento y las funciones fáciles de usar para desarrolladores de este moderno generador de sitios estáticos.',
+      },
+      {
+        title: 'Diseñado con Tailwind CSS',
+        description:
+          'Facilitando un diseño rápido y un estilo consistente con este popular marco CSS de utilidad.',
+      },
+      {
+        title: 'Compatibilidad entre navegadores',
+        description:
+          'Asegúrese de que su sitio web se vea y funcione de manera consistente en varios navegadores web, brindando una experiencia perfecta a todos los usuarios.',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Colorful Image',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Construyendo sobre bases modernas</h3>
+      Obtenga una ventaja competitiva incorporando prácticas líderes en la industria
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isAfterContent
+    items={[
+      {
+        title: 'Alto nivel de personalización',
+        description: `Adapte la plantilla sin esfuerzo para que coincida con la identidad y los requisitos de su marca, haciendo que su sitio web sea distinto y ahorrándole tiempo.`,
+      },
+      {
+        title: 'Múltiples posibilidades de diseño',
+        description:
+          'Explore varias opciones de diseño para encontrar la estructura que mejor presente su contenido, mejorando la participación y la navegación del usuario.',
+      },
+      {
+        title: 'Diseño totalmente responsivo',
+        description:
+          "Garantice el rendimiento óptimo de su sitio web en varios dispositivos y tamaños de pantalla, brindando una experiencia de usuario consistente y agradable.",
+      },
+      {
+        title: 'Integración de medios',
+        description:
+          'Incorpore fácilmente imágenes, vídeos y elementos multimedia que mejoren su contenido y atraigan a los visitantes de forma eficaz.',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1600132806370-bf17e65e942f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2194&q=80',
+      alt: 'Blueprint Image',
+    }}
+  >
+    <Fragment slot="content">Asegúrese de que su presencia en línea realmente lo represente.</Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    isAfterContent
+    items={[
+      {
+        title: 'Mayor participación del usuario',
+        description:
+          'Cautive a su audiencia con elementos interactivos, navegación intuitiva y diseños visualmente atractivos, fomentando visitas más largas.',
+      },
+      {
+        title: 'Mejora continua',
+        description:
+          'Asegúrese de que su sitio web se mantenga alineado con las últimas tendencias y tecnologías a través de actualizaciones y mejoras periódicas.',
+      },
+      {
+        title: 'Eficiencia de tiempo y recursos',
+        description:
+          'Evite el lento proceso de crear un sitio web desde cero y lance su presencia en línea antes con Tecnodespegue.',
+      },
+      {
+        title: 'Soporte comunitario',
+        description: `Únase a la creciente comunidad de TecnoDespegue para obtener información, recursos y asistencia, asegurándose de que nunca estará solo en su viaje de desarrollo web.`,
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1611462985358-60d3498e0364?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Astronauts Image',
+    }}
+  >
+    <Fragment slot="content">Diseñado para fomentar el crecimiento y el éxito.</Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Steps Widget ****************** -->
+
+  <Steps
+    title="Ponga en funcionamiento el sitio web de sus sueños en poco tiempo con Tecnodespegue."
+    items={[
+      {
+        title: 'Paso 1: <span class="font-medium">Download</span>',
+        description:
+         "¡Comienza con Tecnodespegue! Bifurque la plantilla de Tecnodespegue o simplemente haga clic en 'Comprar esta plantilla'. Tu lienzo te espera, listo para tu obra maestra digital. Con sólo unos pocos clics, ya habrá sentado las bases.",
+        icon: 'tabler:package',
+      },
+      {
+        title: 'Paso 2: <span class="font-medium">agregar contenido</em>',
+        description:
+          "Vierte tu visión en ello. Agrega imágenes, texto y todo ese jazz para darle vida a tu espacio digital. Recuerda, es el contenido el que cuenta tu historia, así que hazlo cautivador.",
+        icon: 'tabler:letter-case',
+      },
+      {
+        title: 'Paso 3: <span class="font-medium">Personalizar estilos</span>',
+        description:
+          'Dale tu toque personal. Adapte los colores, las fuentes y los diseños hasta que se sienta perfecto. ¡Tu estilo único, amplificado por Tecnodespegue! La precisión en el diseño garantiza una experiencia de usuario perfecta.',
+        icon: 'tabler:paint',
+      },
+      {
+        title: 'Listo/a!',
+        icon: 'tabler:check',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1616198814651-e71f960c3180?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
+      alt: 'Steps image',
+    }}
+  />
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="Widgets más utilizados"
+    subtitle="Proporciona componentes de uso frecuente para crear sitios web utilizando Tailwind CSS"
+    tagline="Componentes"
+    items={[
+      {
+        title: 'Headers',
+        description: "¿Alguna vez has probado a conducir sin GPS? ¡Auge! Es por eso que los sitios web necesitan encabezados para orientarse.",
+        icon: 'flat-color-icons:template',
+      },
+      {
+        title: 'Heros',
+        description:
+          "Imagínese el aterrizaje de un superhéroe: épico, ¿verdad? ¡Ese es el trabajo de una sección de héroes: hacer grandes entradas!",
+        icon: 'flat-color-icons:gallery',
+      },
+      {
+        title: 'Features',
+        description:
+          'Donde los sitios web se pavonean y muestran superpoderes. ¡Aquí no hay freno para el derecho a fanfarronear!',
+        icon: 'flat-color-icons:approval',
+      },
+      {
+        title: 'Content',
+        description:
+          "Sumérgete en la carne y las patatas de un sitio; sin él, simplemente estarías mirando escaparates. El contenido es el rey.",
+        icon: 'flat-color-icons:document',
+      },
+      {
+        title: 'Call-to-Action',
+        description:
+          '¿Ese amigo entusiasta que siempre te insta: "¡Hazlo! ¡Hazlo!"? Sí, ese es este botón que te empuja hacia la aventura.',
+        icon: 'flat-color-icons:advertising',
+      },
+      {
+        title: 'Pricing',
+        description: 'He aquí el menú de postres del mundo de los sitios web. Te esperan opciones tentadoras, ¿podrás resistirte?',
+        icon: 'flat-color-icons:currency-exchange',
+      },
+      {
+        title: 'Testimonial',
+        description: '¡Entra en el rincón de los chismes! Aquí, otros visitantes cuentan la verdad y comparten los jugosos detalles.',
+        icon: 'flat-color-icons:voice-presentation',
+      },
+      {
+        title: 'Contact',
+        description:
+          'Como un buzón digital, ¡pero más rápido! Escríbanos, haga una pregunta o envíe un choque de manos virtual. ¡Timbre! Mensaje en.',
+        icon: 'flat-color-icons:business-contact',
+      },
+      {
+        title: 'Footers',
+        description: "El pie de página es como los créditos de una película, pero salpicado de huevos de Pascua. ¡Es hora de cazar!",
+        icon: 'flat-color-icons:database',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Features2>
+
+  <!-- HighlightedPosts Widget ******* -->
+
+  <BlogLatestPosts
+    title="Descubre más contenidos en nuestro Blog"
+    information={`El blog se utiliza para mostrar la documentación de Tecnodespegue.
+      Cada nuevo artículo será un paso importante que necesitarás saber para ser un experto en la creación de un sitio web usando Astro + Tailwind CSS.
+      Astro es una tecnología muy interesante. Gracias.
+                `}
+  />
+
+  <!-- FAQs Widget ******************* -->
+
+  <FAQs
+    title="Preguntas frecuentes"
+    subtitle="Profundice en las siguientes preguntas para obtener información sobre las poderosas funciones que ofrece Tecnodespegue y cómo puede mejorar su viaje de desarrollo web."
+    tagline="FAQs"
+    classes={{ container: 'max-w-6xl' }}
+    items={[
+      {
+        title: '¿Por qué Tecnodespegue?',
+        description:
+          "René Kuhm, un joven solitario que emprende una cruzada para defender la causa de los inocentes. Los indefensos. Los impotentes en un mundo de criminales que operan por encima de la ley. Aquí viene. Aquí viene Speed ​​Racer. Es un angel sobre ruedas.",
+      },
+      {
+        title: '¿Qué necesito para empezar?',
+        description:
+          'Espacio de la última frontera. Estos son los viajes de Tecnodespegue. Su misión de cinco años: explorar nuevos mundos extraños. Muchos dicen que la exploración es parte de nuestro destino, pero en realidad es nuestro deber para con las generaciones futuras.',
+      },
+      {
+        title: '¿Cómo instalar la plantilla CSS Astro + Tailwind?',
+        description:
+          "Bueno, la forma en que hacen espectáculos es: hacen un espectáculo. Ese programa se llama piloto. Luego muestran ese programa a las personas que lo hacen y, basándose en ese programa, deciden si van a hacer más programas.",
+      },
+      {
+        title: "Qué es algo que no entiendes?",
+        description:
+          "Una flor en mi jardín, un misterio en mis bragas. Un ataque al corazón nunca detuvo al viejo Big Bear. Ni siquiera sabía que lo llamábamos Big Bear.",
+      },
+      {
+        title: '¿Qué es algo que te gustaría volver a intentar?',
+        description:
+          "Una empresa lo suficientemente grande como para cotizar en el NASDAQ fracasa. ¡Desaparece! Deja de existir sin mí. No, claramente no sabes con quién estás hablando, así que déjame darte una pista.",
+      },
+      {
+        title: 'Si solo pudieras hacer una pregunta a cada persona que conoces, ¿cuál sería esa pregunta?',
+        description:
+          "No se trata de venganza. Se trata de justicia. Muchas cosas pueden cambiar en doce años, almirante. Bueno, ciertamente es bueno saberlo. Unos cuatro años. Me cansé de escuchar lo joven que me veía.",
+      },
+    ]}
+  />
+
+  <!-- Stats Widget ****************** -->
+
+  <Stats
+    stats={[
+      { title: 'Downloads', amount: '132K' },
+      { title: 'Stars', amount: '24.8K' },
+      { title: 'Forks', amount: '10.3K' },
+      { title: 'Users', amount: '48.4K' },
+    ]}
+  />
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Contactame',
+        href: '/contact',
+        target: '_blank',
+        icon: 'tabler:download',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      Astro&nbsp;+&nbsp;<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">Tailwind CSS</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+     <br class="hidden md:inline"
+    ></Fragment>
+  </CallToAction>
+</Layout>

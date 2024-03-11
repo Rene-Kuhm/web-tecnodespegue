@@ -1,0 +1,244 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import Prices from '~/components/widgets/Pricing.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Precios',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- HeroText Widget ******************* -->
+
+  <HeroText
+    tagline="Precios"
+    title="Precios insuperables"
+    subtitle="Elige el plan perfecto que se alinee con tus objetivos."
+  />
+
+  <!-- Pricing Widget ******************* -->
+
+  <Prices
+    title="Nuestros precios"
+    subtitle="Solo paga por lo que necesites"
+    prices={[
+      {
+        title: 'basic',
+        subtitle: 'Elección óptima para uso personal.',
+        price: 29,
+        period: 'por mes',
+        items: [
+          {
+            description: 'Etiam in libero, et volutpat',
+          },
+          {
+            description: 'Aenean ac nunc dolor tristique',
+          },
+          {
+            description: 'Cras scelerisque accumsan lib',
+          },
+          {
+            description: 'In hac habitasse',
+          },
+        ],
+        callToAction: {
+          target: '_blank',
+          text: 'Empezar',
+          href: '#',
+        },
+      },
+      {
+        title: 'Estándar',
+        subtitle: 'Opción óptima para equipos pequeños',
+        price: 69,
+        period: 'Por mes',
+        items: [
+          {
+            description: 'Proin vel laoreet',
+          },
+          {
+            description: 'Ut efficitur habitasse egestas',
+          },
+          {
+            description: 'Volutpat hac curabitur',
+          },
+          {
+            description: 'Pellentesque blandit ut nibh',
+          },
+          {
+            description: 'Donec fringilla sem',
+          },
+        ],
+        callToAction: {
+          target: '_blank',
+          text: 'Empezar',
+          href: '#',
+        },
+        hasRibbon: true,
+        ribbonTitle: 'popular',
+      },
+      {
+        title: 'premium',
+        subtitle: 'Opción óptima para empresas.',
+        price: 199,
+        period: 'Por mes',
+        items: [
+          {
+            description: 'Curabitur suscipit risus',
+          },
+          {
+            description: 'Aliquam habitasse malesuada',
+          },
+          {
+            description: 'Suspendisse sit amet blandit',
+          },
+          {
+            description: 'Suspendisse auctor blandit dui',
+          },
+        ],
+        callToAction: {
+          target: '_blank',
+          text: 'Empezar',
+          href: '#',
+        },
+      },
+    ]}
+  />
+
+  <!-- Features3 Widget ************** -->
+
+  <Features3
+    title="Funciones relacionadas con el precio"
+    subtitle="Descubre las ventajas de elegir nuestros planes"
+    columns={2}
+    items={[
+      {
+        title: 'Planes de precios escalonados',
+        description: 'Elija entre una variedad de planes de precios diseñados para adaptarse a diferentes presupuestos y requisitos.',
+        icon: 'tabler:stairs',
+      },
+      {
+        title: 'Precios transparentes',
+        description: 'Detalles de precios claramente mostrados para cada plan, sin costos ocultos ni cargos inesperados.',
+        icon: 'tabler:flip-vertical',
+      },
+      {
+        title: 'Métodos de pago seguros',
+        description: 'Pasarelas de pago seguras para proteger su información financiera durante las transacciones.',
+        icon: 'tabler:shield-lock',
+      },
+      {
+        title: 'Acceso instantáneo',
+        description: `Acceso inmediato a las funciones y plantillas de su plan elegido al momento de la suscripción.`,
+        icon: 'tabler:accessible',
+      },
+      {
+        title: 'Valor de actualización',
+        description: 'Actualice a planes de nivel superior para desbloquear más funciones y beneficios para una experiencia mejorada.',
+        icon: 'tabler:chevrons-up',
+      },
+      {
+        title: '24H soporte',
+        description: 'Preguntas respondidas a través de chat en vivo, correo electrónico o teléfono, todos los días calendario.',
+        icon: 'tabler:headset',
+      },
+    ]}
+    classes={{ container: 'max-w-5xl' }}
+  />
+
+  <!-- Steps Widget ****************** -->
+
+  <Steps
+    title="Un viaje guiado desde los planes a la creatividad"
+    tagline="proceso simplificado"
+    isReversed={true}
+    items={[
+      {
+        title: 'Explorar planes',
+        icon: 'tabler:number-1',
+      },
+      {
+        title: 'Selecciona un plan',
+        icon: 'tabler:number-2',
+      },
+      {
+        title: 'Registrate e inicia secion',
+        icon: 'tabler:number-3',
+      },
+      {
+        title: 'Revisar orden',
+        icon: 'tabler:number-4',
+      },
+      {
+        title: 'Ingrese los detalles de pago',
+        icon: 'tabler:number-5',
+      },
+      {
+        title: 'Confirmación',
+        icon: 'tabler:number-6',
+      },
+      {
+        title: 'Descargue y comience a usar la(s) plantilla(s)',
+        icon: 'tabler:number-7',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1536816579748-4ecb3f03d72a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
+      alt: 'Steps image',
+    }}
+  />
+
+  <!-- FAQs Widget ******************* -->
+
+  <FAQs
+    title="Preguntas frecuentes sobre precios"
+    subtitle="Elegir el plan correcto es importante y estamos aquí para responder sus preguntas. Si tiene consultas sobre nuestras opciones de precios, está en el lugar correcto."
+    columns={1}
+    items={[
+      {
+        title: '¿Los planes vienen con atención al cliente?',
+        description:
+          'Por supuesto, todos los planes incluyen acceso a nuestro exclusivo servicio de atención al cliente para ayudarle con cualquier consulta o inquietud.',
+      },
+      {
+        title: '¿Existe un período de prueba para los diferentes planes?',
+        description:
+          "Lamentablemente, no ofrecemos períodos de prueba para los planes. Sin embargo, puede consultar nuestra sección de demostración para obtener una vista previa de la calidad de nuestras plantillas.",
+      },
+      {
+        title: '¿Puedo cambiar entre planes?',
+        description:
+          '¡Ciertamente! Puede actualizar o degradar fácilmente su plan, en cualquier momento, para encontrar el que mejor se adapte a sus necesidades cambiantes.',
+      },
+      {
+        title: '¿Qué métodos de pago aceptan?',
+        description:
+          'Aceptamos las principales tarjetas de crédito y métodos de pago en línea para garantizar un proceso de transacción conveniente y seguro.',
+      },
+      {
+        title: '¿Hay cargos ocultos más allá del costo mostrado?',
+        description:
+          'No, el costo de la suscripción cubre todas las funciones y plantillas enumeradas en cada plan. No hay tarifas ocultas ni cargos adicionales.',
+      },
+    ]}
+  />
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    title="¿Listo/a para impulsar tus proyectos?"
+    subtitle="Únase a nuestra comunidad de clientes satisfechos que han transformado su trabajo con nuestras plantillas."
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Empieza ahora',
+        href: '/',
+      },
+    ]}
+  />
+</Layout>
